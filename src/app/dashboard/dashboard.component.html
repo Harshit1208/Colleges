@@ -1,0 +1,36 @@
+<div class="main">
+
+  <h3>Colleges in North India</h3>
+  <hr>
+
+  <div class="row">
+    <div class="column" *ngFor='let college of colleges'>
+      <div class="content">
+        <div class="container">
+          <img src='../../assets/college_01.jpg' [alt]="college.college_name" style="width:100%">
+          <div class="text-block">
+            <p><small><small>{{college.tags}}</small></small></p>
+          </div>
+          <div class="bottom-right"><small>><b>{{college.ranking}}</b></small></div>
+        </div>
+        <div class="row1">
+          <div class="column1">
+            <h3>{{college.college_name}}</h3>
+            <p><small>{{college.nearest_place}}</small></p>
+            <p><small>{{college.famous_nearest_places}}</small></p>
+            <p><small><b><mark>{{college.offertext}}</mark></b></small></p>
+          </div>
+          <div class="column2">
+            <p><small><del>₹{{college.original_fees}}</del> {{college.discount}}%</small></p>
+
+            <h2 class="color">₹{{college.discounted_fees}}</h2>
+            <p><small><small>{{college.fees_cycle}}</small></small></p>
+            <p class="green"><small><b>{{college.amenties}}</b></small></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
